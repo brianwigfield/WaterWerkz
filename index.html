@@ -107,19 +107,19 @@
 				<table id="assessmentQuestions">
 					<tr>
 						<td>How many days is your project estimated to take?</td>
-						<td><input id="assessment-days"/></td>
+						<td><input id="assessment-days" value="180"/></td>
 					</tr>
 					<tr>
 						<td>How many <u>good</u> developers are assigned to the project?</td>
-						<td><input id="assessment-goodDevs"/></td>
+						<td><input id="assessment-goodDevs" value="1"/></td>
 					</tr>
 					<tr>
 						<td>How many <u>poor</u> developers are assigned to the project?</td>
-						<td><input id="assessment-poorDevs"/></td>
+						<td><input id="assessment-poorDevs" value="0"/></td>
 					</tr>
 					<tr>
 						<td>How many pages are in your documentation?</td>
-						<td><input id="assessment-pages"/></td>
+						<td><input id="assessment-pages" value="0"/></td>
 					</tr>
 					<tr>
 						<td>Do you have a change management process?</td>
@@ -127,15 +127,15 @@
 					</tr>
 					<tr>
 						<td>How many features do you have?</td>
-						<td><input id="assessment-features"/></td>
+						<td><input id="assessment-features" value="0"/></td>
 					</tr>
 					<tr>
 						<td>How many managers are involved in the project?</td>
-						<td><input id="assessment-managers"/></td>
+						<td><input id="assessment-managers" value="0"/></td>
 					</tr>
 					<tr>
-						<td>On a scale of 1 to 10, how difficult are your stakeholders to work with?</td>
-						<td><input id="assessment-difficulty"/></td>
+						<td>On a scale of 1 (best) to 10 (worst), how difficult are your stakeholders to work with?</td>
+						<td><input id="assessment-difficulty" value="10"/></td>
 					</tr>
 				</table>
 				<p><a id="processQuote" href="#/assessment" class="more-link-button">Get Free Quote</a></p>
@@ -174,12 +174,12 @@
 <!-- wrap ends here -->
 </div>
 
-<div id="calculatingScreen" style="width:600px; height:300px; padding:20px;">
+<div id="calculatingScreen" style="width:600px; height:350px; padding:20px;">
 	<div id="calculatingScreen-processing" style="margin-top:80px">
 		Calculating....
 		<div id="calculatingSpinner" style="height:200px;"></div>
 	</div>
-	<div id="calculatingScreen-results" style="display:none; margin: 40px 0px 40px 0px;">
+	<div id="calculatingScreen-results" style="display:none;">
 		Based on the values entered your project has the following attributes
 		<ul>
 			<li>100% chance of experiencing scope creep</li>
@@ -193,6 +193,8 @@
 		<p>
 			If the cost of our service is to high for your project/company to support, you may be interested in another alternative. We suggest contacting <a href="http://www.adventuretechgroup.com">AdventureTech</a> to learn how to self insure your software projects internally at a much lower cost.
 		</p>
+
+		<a id="calculatingScreen-close" href="#/assessment" class="more-link-button">Close</a>
 	</div>
 </div>
 
@@ -234,9 +236,10 @@
 			if ($('#assessment-days').val() > 0)
 				risk = $('#assessment-days').val();
 
-			var devCost = ($('#assessment-goodDevs').val() * ($('#assessment-poorDevs') * 4));
+			var devCost = ($('#assessment-goodDevs').val() * ($('#assessment-poorDevs').val() * 4));
 			if (devCost > 0)
 				risk = risk * devCost;
+			console.log(devCost);
 
 			if ($('#assessment-cmp').is(':checked'))
 				risk = risk * 4;
@@ -253,7 +256,7 @@
 			if ($('#assessment-pages').val() > 50)
 				risk = risk * 2;
 
-			$('#calculatingScreen-insuranceCost').html((risk * 6.44).formatMoney(2, '.', ','));
+			$('#calculatingScreen-insuranceCost').html((risk * 2.44).formatMoney(2, '.', ','));
 
 			var deadlineChange = Math.floor(Math.random() * (99 - 10 + 1)) + 10;
 			$('#calculatingScreen-deadlineChance').html(Math.floor(deadlineChange));
@@ -285,6 +288,12 @@
 		$('#calculatingScreen').css({ 'top': '150px', 'left': ($(window).width() / 2 - $('#calculatingScreen').width() / 2), 'z-index': '10001' })
             .slideDown(startSpinner)
             .focus();
+		$('#calculatingScreen-processing').show();
+		$('#calculatingScreen-results').hide();
+
+        $('#calculatingScreen-close').click(function () {
+        	$('#calculatingScreen').hide();
+        });
 	});
 
 	contentPages.run('#/');
