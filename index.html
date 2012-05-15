@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title>WaterWerkz!!!</title>
+	<link rel="stylesheet" type="text/css" media="screen" href="css/screen.css" />
+	<script type="text/javascript" src="scripts/jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" src="scripts/knockout.js"></script>
+	<script type="text/javascript" src="scripts/sammy.js"></script>
+	<script type="text/javascript" src="scripts/spin.js"></script>
+</head>
+
+<body>
+
+<!-- wrap starts here -->
+<div id="wrap">
+
+	<!--header -->
+	<div id="header">			
+				
+		<h1 id="logo-text"><a href="index.html" title="">WaterWerkz!!!</a></h1>		
+		<p id="slogan">Building software safely without Agile</p>	
+		
+		<div  id="nav">
+			<ul>
+				<li id="menu-home" class="current"><a href="#/">Home</a></li>
+				<li id="menu-how"><a href="#/how">How it works</a></li>
+				<li id="menu-assessment"><a href="#/assessment">Free Assessment</a></li>		
+			</ul>		
+		</div>	
+		
+		<div id="header-image"></div>
+						
+	<!--header ends-->					
+	</div>
+	
+	<!-- featured starts -->	
+	<div id="featured" class="clear">				
+				
+			<a name="TemplateInfo"></a>
+			
+			<div class="image-block">
+              <img src="images/process.png" alt="featured"/>
+         </div>			
+			
+			<div class="text-block">
+			
+				<h2><a href="index.html">Successful Waterfall</a></h2>
+			
+                <p><strong>WaterWerkz!!! is a service to ensure your software projects will never go over cost and leave you without working software.</strong>
+				If you have tried Agile practices and found them too hard or are currently using waterfall techniques and don't wish to switch to Agile, our service will allow you to retain your current upfront design process while still alowing your customer to change the software without effecting the projects timeframe or budget.
+                </p>
+
+                <p>
+                This probably seems all to good to be true but head on over to the <a href="#/how">how it works</a> page to have all your questions answered.
+                Then take a minute to complete your free online assessment and quote.
+				</p>
+
+				<p><a href="#/assessment" class="more-link-button">Free Assessment</a></p>
+								
+			</div>
+	
+	<!-- featured ends -->
+	</div>	
+	
+	<!-- content -->
+	<div id="content-outer" class="clear"><div id="content-wrap">
+	
+		<div id="content">
+		
+			<div id="content-home" class="left">
+			
+				<div class="entry">
+				
+					<h3><a href="index.html">About our service</a></h3>
+					<p>
+					Everybody is flocking to, or at a minimum investigating these newer 'Agile' methods to delievering software with promises of fixing their woes with 'traditional' waterfall processes. Common issues mentioned by the critics are that you can't guarantee how long software will take to develop or that it will get completed on an 'arbitrary' date because of the nature/complexity of software....
+					</p>
+								
+					<p><a class="more-link" href="index.html">continue...</a></p>
+				
+				</div>
+				
+			</div>
+
+			<div id="content-how" class="left" style="display:none;">			
+			
+				<h2>How it works</h2>
+			
+				<div class="image-section">
+          			<img src="images/questions.png" />
+     			</div>					
+				
+				<p>Everybody is flocking to, or at a minimum investigating these newer 'Agile' methods to delievering software with promises of fixing their woes with 'traditional' waterfall processes. Common issues mentioned by the critics are that you can't guarantee how long software will take to develop or that it will get completed on an 'arbitrary' date because of the nature/complexity of software.</p>
+		
+				<p>Agilists will be quick to point out that doing agile practices allow you to manage software risk. We think that switching to a different process is not the best option to manage your risks. Not unlike managing other risks in life we offer insurance for your waterfall software project. The exact forumla we use is a closely guarded business secret that we have designed after man years of measuring variances in other software projects.</p>			
+			
+				<p>Once we engage with you, we will assign a emissary to keep tabs on your managers and developers to see how the project is progressing, in addition we will manage your change management process for optimum accountability. If at some point we feel the project is falling behind or scope has crept too much then we will bring in our crack team of developers to bring you back up to a point in the project we feel comfortable with. If for some reason the project does not deliever the intended value, included in the cost of our service is insurance premiums to reimburse the lost business value.</p>
+
+				<p>If our service sounds like a great benefit to you and your company, please take a moment and fill out our free online assessment by following the link below.</p>
+
+				<a href="#/assessment" class="more-link-button">Free Assessment</a>
+
+			</div>
+
+			<div id="content-assessment" class="left" style="display:none;">
+				<table id="assessmentQuestions">
+					<tr>
+						<td>How many days is your project estimated to take?</td>
+						<td><input id="assessment-days"/></td>
+					</tr>
+					<tr>
+						<td>How many <u>good</u> developers are assigned to the project?</td>
+						<td><input id="assessment-goodDevs"/></td>
+					</tr>
+					<tr>
+						<td>How many <u>poor</u> developers are assigned to the project?</td>
+						<td><input id="assessment-poorDevs"/></td>
+					</tr>
+					<tr>
+						<td>How many pages are in your documentation?</td>
+						<td><input id="assessment-pages"/></td>
+					</tr>
+					<tr>
+						<td>Do you have a change management process?</td>
+						<td><input type="checkbox" id="assessment-cmp"/></td>
+					</tr>
+					<tr>
+						<td>How many features do you have?</td>
+						<td><input id="assessment-features"/></td>
+					</tr>
+					<tr>
+						<td>How many managers are involved in the project?</td>
+						<td><input id="assessment-managers"/></td>
+					</tr>
+					<tr>
+						<td>On a scale of 1 to 10, how difficult are your stakeholders to work with?</td>
+						<td><input id="assessment-difficulty"/></td>
+					</tr>
+				</table>
+				<p><a id="processQuote" href="#/assessment" class="more-link-button">Get Free Quote</a></p>
+			</div>
+
+			<div class="right">
+							
+				<div class="sidemenu">	
+					<h3>Waterfall Resources</h3>
+					<ul>				
+						<li><a href="http://en.wikipedia.org/wiki/Waterfall_model">Definition</a></li>
+						<li><a href="http://www.waterfallmanifesto.org/">Waterfall Manifesto</a></li>
+						<li><a href="http://www.the-software-tester.com/games.html">Waterfall Game</a></li>
+						<li><a href="http://www.lyrics007.com/TLC%20Lyrics/Waterfalls%20Lyrics.html">Waterfall Lyrics</a></li>
+					</ul>	
+				</div>
+			</div>		
+		
+		</div>
+			
+	<!-- content end -->	
+	</div></div>
+	
+	<!-- footer-bottom starts -->		
+	<div id="footer-bottom">
+		<div class="bottom-left">
+			<p>
+			&copy; 2012 <strong>Brian Wigfield</strong>&nbsp; &nbsp; &nbsp;
+			Just another <a href="http://www.gingerrant.com/">ginger rant</a>
+			</p>
+		</div>
+	
+	<!-- footer-bottom ends -->		
+	</div>
+	
+<!-- wrap ends here -->
+</div>
+
+<div id="calculatingScreen" style="width:600px; height:300px; padding:20px;">
+	<div id="calculatingScreen-processing" style="margin-top:80px">
+		Calculating....
+		<div id="calculatingSpinner" style="height:200px;"></div>
+	</div>
+	<div id="calculatingScreen-results" style="display:none; margin: 40px 0px 40px 0px;">
+		Based on the values entered your project has the following attributes
+		<ul>
+			<li>100% chance of experiencing scope creep</li>
+			<li><span id="calculatingScreen-deadlineChance"></span>% chance of not meeting the project deadline</li>
+			<li><span id="calculatingScreen-neverCompleteChance"></span>% chance of never completing</li>
+		</ul>
+
+		After taking all risks and unknowns into account we are prepared to guarantee your software and insure it for the following ammount.
+		<h2 style="color:green;">$<span id="calculatingScreen-insuranceCost"></span></h2>
+	</div>
+</div>
+
+<script>
+	var contentPages = Sammy('#content', function() {
+		setMenu = function(item)
+		{
+			$('.current').removeClass('current');
+			$('#menu-' + item).addClass('current');
+		};
+
+		this.get('#/', function() {
+			setMenu('home');
+			$('.left').hide();
+			$('#featured').show();
+			$('#content-home').show();
+		});
+		this.get('#/how', function() {
+			setMenu('how');
+			$('.left').hide();
+			$('#featured').hide();
+			$('#content-how').show();
+		});
+		this.get('#/assessment', function() {
+			setMenu('assessment');
+			$('.left').hide();
+			$('#featured').hide();
+			$('#content-assessment').show();
+		});
+	});
+
+	$('#processQuote').click(function() {
+		var createQuote = function() {
+
+			$('#calculatingScreen-processing').hide();
+			$('#calculatingScreen-results').show();
+
+			var risk = 180; //everything takes 6 months
+			if ($('#assessment-days').val() > 0)
+				risk = $('#assessment-days').val();
+
+			var devCost = ($('#assessment-goodDevs').val() * ($('#assessment-poorDevs') * 4));
+			if (devCost > 0)
+				risk = risk * devCost;
+
+			if ($('#assessment-cmp').is(':checked'))
+				risk = risk * 4;
+
+			if ($('#assessment-features').val() > 0)
+				risk = risk * $('#assessment-features').val();
+			
+			if ($('#assessment-managers').val() > 0)
+				risk = risk * $('#assessment-managers').val();
+
+			if ($('#assessment-difficulty').val() > 0)
+				risk = risk * $('#assessment-difficulty').val();
+
+			if ($('#assessment-pages').val() > 50)
+				risk = risk * 2;
+
+			$('#calculatingScreen-insuranceCost').html((risk * 6.44).formatMoney(2, '.', ','));
+
+			var deadlineChange = Math.floor(Math.random() * (99 - 10 + 1)) + 10;
+			$('#calculatingScreen-deadlineChance').html(Math.floor(deadlineChange));
+			$('#calculatingScreen-neverCompleteChance').html(Math.floor(Math.random() * (99 - deadlineChange + 1)) + deadlineChange);
+		};
+
+        var startSpinner = function () {
+			var opts = {
+			  lines: 7, // The number of lines to draw
+			  length: 30, // The length of each line
+			  width: 11, // The line thickness
+			  radius: 30, // The radius of the inner circle
+			  rotate: 0, // The rotation offset
+			  color: '#000', // #rgb or #rrggbb
+			  speed: 1.8, // Rounds per second
+			  trail: 70, // Afterglow percentage
+			  shadow: false, // Whether to render a shadow
+			  hwaccel: false, // Whether to use hardware acceleration
+			  className: 'spinner', // The CSS class to assign to the spinner
+			  zIndex: 2e9, // The z-index (defaults to 2000000000)
+			  top: 'auto', // Top position relative to parent in px
+			  left: 'auto' // Left position relative to parent in px
+			};
+			var target = document.getElementById('calculatingSpinner');
+			var spinner = new Spinner(opts).spin(target);
+			setTimeout(createQuote, 5000);
+		};
+
+		$('#calculatingScreen').css({ 'top': '150px', 'left': ($(window).width() / 2 - $('#calculatingScreen').width() / 2), 'z-index': '10001' })
+            .slideDown(startSpinner)
+            .focus();
+	});
+
+	contentPages.run('#/');
+
+	Number.prototype.formatMoney = function(c, d, t){
+	var n = this, c = isNaN(c = Math.abs(c)) ? 2 : c, d = d == undefined ? "," : d, t = t == undefined ? "." : t, s = n < 0 ? "-" : "", i = parseInt(n = Math.abs(+n || 0).toFixed(c)) + "", j = (j = i.length) > 3 ? j % 3 : 0;
+	   return s + (j ? i.substr(0, j) + t : "") + i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + t) + (c ? d + Math.abs(n - i).toFixed(c).slice(2) : "");
+	 };
+</script>
+
+</body>
+</html>
